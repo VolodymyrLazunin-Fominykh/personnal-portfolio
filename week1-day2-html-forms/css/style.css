@@ -127,6 +127,7 @@ input[type="email"]:focus,
 textarea:focus {
     outline: none;
     border-color: var(--slate);
+    color: var(--ghost)
 }
 
 button {
