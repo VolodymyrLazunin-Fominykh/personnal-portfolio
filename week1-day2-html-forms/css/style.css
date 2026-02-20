@@ -23,6 +23,50 @@ body {
     background-color: var(--void);
 }
 
+/* Nav Bar */
+
+nav {
+    background-color: var(--obsidian);
+    padding: 5px 0;
+    position: sticky; /* Doesn't move while scroll*/
+    top:0;
+    z-index: 100; /* Override other components -> no text superposition  */
+    border-radius: 14px;
+}
+
+.nav-container {
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+    color: var(--mist);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+}
+
+.nav-links a {
+    border-radius: 40px;
+    color: var(--ash);
+    text-decoration: none;
+    padding: 8px 15px;
+    transition: background-color 0.3s; /* Adds some time on color transition = cleaner */
+}
+
+.nav-links a:hover {
+    background-color: var(--void);
+}
+
 /* Hyperlinks */
 
 a {
@@ -83,15 +127,56 @@ table {
     align-items: center;
 }
 
+/* Skills Section */
+
+.skills-container {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.skill-card {
+    flex-shrink: 0;
+    flex-grow: 1;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    margin: 5px ;
+    padding: 10px;
+
+    border: solid 2px;
+    border-radius: 20px;
+    border-color: var(--mist);
+
+    background-color: var(--graphite);
+}
+
+.skill-card h3 {
+    margin-bottom: 10px;
+    color: var(--ash);
+}
+
+.skill-card p {
+    color: var(--ghost);
+    font-size: 0.9rem;
+}
+
+
 
 /* Footer */
 footer {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 20px;
     padding: 20px;
     color: #666;
+
+    display: flex;
+    justify-content: space-around;
 }
 
+footer p {
+    align-self: flex-end;
+}
 
 /* Form styling */
 form {

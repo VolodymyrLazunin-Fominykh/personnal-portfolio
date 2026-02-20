@@ -26,3 +26,25 @@ margin → space outside element
 - font-size: size of text
 - font-family: font type
 - width, height: dimensions
+
+# Day 4 Notes - Flexbox
+
+## Flex Container Properties
+- display: flex; → Makes element a flex container
+- flex-direction: row | column → Direction of items
+- justify-content: → Horizontal alignment
+  - flex-start, flex-end, center, space-between, space-around
+- align-items: → Vertical alignment
+  - flex-start, flex-end, center, stretch
+- gap: 20px; → Space between items
+
+## Flex Item Properties
+- flex: 1; → Item takes available space
+- order: 2; → Change display order
+
+## Common Pattern
+.container {
+    display: flex;
+    justify-content: center;  /* center horizontally */
+    align-items: center;      /* center vertically */
+}
