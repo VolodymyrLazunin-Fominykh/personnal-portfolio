@@ -2,8 +2,8 @@
 
 ## How to Add CSS
 
-1. External: <link rel="stylesheet" href="css/style.css">
-2. Internal: <style> in <head>
+1. External: ```<link rel="stylesheet" href="css/style.css">```
+2. Internal: ```<style> in <head>```
 3. Inline: style="" attribute (avoid this)
 
 ## Selectors
@@ -48,3 +48,34 @@ margin → space outside element
     justify-content: center;  /* center horizontally */
     align-items: center;      /* center vertically */
 }
+
+# Day 5 Notes - CSS Grid
+
+## Grid Container Properties
+
+- display: grid; → Makes element a grid container
+- grid-template-columns: 1fr 1fr 1fr; → 3 equal columns
+- grid-template-columns: repeat(3, 1fr); → Same as above
+- grid-template-rows: 200px auto; → Row heights
+- gap: 20px; → Space between grid items
+
+## Common Patterns
+```
+/*3-column layout*/
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/*Responsive: 2 columns on smaller screens*/
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+```
+## Grid vs Flexbox
+
+- Flexbox: 1-dimensional (row OR column)
+- Grid: 2-dimensional (rows AND columns)

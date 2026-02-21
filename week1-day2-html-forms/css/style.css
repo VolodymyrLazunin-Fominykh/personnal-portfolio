@@ -20,7 +20,7 @@ body {
     line-height: 1.6em;
     color: var(--ghost);
     padding: 20px;
-    background-color: var(--void);
+    background: linear-gradient(15deg, #755ad4 5%, #764ba2 100%);
 }
 
 /* Nav Bar */
@@ -80,12 +80,64 @@ a:hover {
 
 /* Header */
 
-header {
+
+/* Hero Section */
+.hero {
+    background: rgba(0, 0, 0, 0.1);
+    color: var(--ghost);
+    padding: 100px 20px;
     text-align: center;
+    border-radius: 50px;
 }
-header h1 {
-    font-size: 2.5rem; /* rem = ... */
-    margin: 20px;
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.btn {
+    padding: 12px 30px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background-color: var(--graphite);
+    color: var(--ash);
+}
+
+.btn-primary:hover {
+    background-color: var(--obsidian);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--ash);
+    border: 2px solid #fff;
+}
+
+.btn-secondary:hover {
+    background-color: var(--obsidian);
+    color: var(--ghost);
 }
 
 /* Main Content */
@@ -160,6 +212,64 @@ table {
     color: var(--ghost);
     font-size: 0.9rem;
 }
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: var(--mist);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0,0.4);
+}
+
+.project-image {
+    width: 100%;
+    justify-self: flex-start;
+}
+
+.project-content {
+    padding: 20px;
+    justify-self: flex-end;
+}
+
+.project-content h3 {
+    margin-bottom: 10px;
+    color: var(--ghost);
+}
+
+.project-content p {
+    color: var(--ghost);
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.project-link {
+    align-self: flex-end;
+
+    color: var(--ash);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.project-link:hover {
+    color: var(--slate);
+}
+
 
 
 
